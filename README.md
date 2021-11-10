@@ -1,5 +1,7 @@
 # Dockerización de una aplicación de análisis de tweets
 
+###### Diciembre 2018
+
 En esta práctica se empaqueta y distribuye una aplicación Python que descarga y analiza tweets. Los resultados del análisis se guardan en una base de datos MongoDB, y la información se muestra en la web. La versión de la aplicación empaquetada en contenedores Docker realiza el análisis en local usando Hadoop streaming, mediante _mrjob_ `-r local`.
 
 
