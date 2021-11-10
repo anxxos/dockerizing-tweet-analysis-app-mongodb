@@ -34,10 +34,12 @@ Una vez modificado, únicamente es necesario el archivo 'docker-compose.yml'. Ej
 #### Para etiquetar las imágenes:
 
 `$ sudo docker tag <image_id> <account_name> practicacloud_tweetanalysis:latest`
+
 `$ sudo docker tag <image_id> <account_name> practicacloud_web:latest`
 
 #### Para publicar las imágenes:
 
 `$ sudo docker push <account_name> practicacloud_tweetanalysis:latest`
+
 `$ sudo docker push <account_name> practicacloud_web:latest`
 
