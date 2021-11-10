@@ -1,0 +1,4 @@
+flask
+pymongo
+mrjob
+oauth2

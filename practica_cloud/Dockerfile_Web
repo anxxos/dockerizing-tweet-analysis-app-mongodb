@@ -1,0 +1,5 @@
+FROM python:2.7
+ADD . /practica_cloud
+WORKDIR /practica_cloud
+RUN pip install -r requirements_web.txt
+CMD ["python","-u","web.py"]

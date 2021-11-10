@@ -1,0 +1,29 @@
+version: '3'
+services:
+  tweetanalysis:
+    environment:       
+      - TIME=200
+      - ATK=153033963-jP68EHbn2wJvaCSSQ5bO4V27aKXew4J6TCODJGuy
+      - ATS=Zh25lNhA6tjSxgNq0zkAuyoWkYO3g60f4AaPg1kcVIOMq
+      - CK=JqNuqL2hzorubHxGPLqf6szSU
+      - CS=mxbkcTBA1tiP0VtVU2SzwOwBhHC6IDN5fP84FdMiaCP3OGkaMa
+    build:
+      context: .
+      dockerfile: Dockerfile_TweetAnalysis
+    volumes:
+      - .:/practica_cloud
+    links:
+      - db
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile_Web
+    ports:
+      - "5000:5000"     
+    volumes:
+      - .:/practica_cloud
+    links:
+      - db
+  db:
+    image: mongo:3.0.2
+

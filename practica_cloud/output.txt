@@ -1,0 +1,3 @@
+"Happiest state"	["Wisconsin", 1]
+"1 rank"	["Indiana", 1]
+"2 rank"	["Minnesota", -2]
