@@ -1,11 +1,9 @@
 # Dockerización de una aplicación de análisis de tweets
 
-En esta práctica se empaqueta y distribuye una aplicación Python que descarga y analiza tweets. Los resultados del análisis se guardan en una base de datos MongoDB, y la información se muestra en la web. La versión de la aplicación empaquetada en contenedores Docker realiza el análisis en local usando Hadoop streaming, mediante _mrjob -r local_.
-
-> *IMPORTANTE*: Se adjuntan los archivos tweets.json y output.txt resultantes de la ejecución. Antes de realizar cualquier otra ejecución, es conveniente eliminar dichos archivos para evitar cualquier tipo de error de sobreescritura.
+En esta práctica se empaqueta y distribuye una aplicación Python que descarga y analiza tweets. Los resultados del análisis se guardan en una base de datos MongoDB, y la información se muestra en la web. La versión de la aplicación empaquetada en contenedores Docker realiza el análisis en local usando Hadoop streaming, mediante _mrjob_ `-r local`.
 
 
-### SOBRE LA CREACIÓN Y EJECUCIÓN DE CONTENEDORES 
+### Sobre la creación y ejecución de contenedores
 
 #### Si se desea crear las imágenes antes de ejecutar las aplicaciones, situarse en la carpeta que contiene la práctica y ejecutar:
 
@@ -27,7 +25,7 @@ Una vez modificado, únicamente es necesario el archivo 'docker-compose.yml'. Ej
 
 `$ sudo docker-compose up`
 
-### SOBRE LA PUBLICACIÓN DE CONTENEDORES
+### Sobre la publicación de contenedores
 
 #### Será necesario acceder a una cuenta de DockerHub:
 
@@ -35,15 +33,11 @@ Una vez modificado, únicamente es necesario el archivo 'docker-compose.yml'. Ej
 
 #### Para etiquetar las imágenes:
 
-`$ sudo docker tag <image_id> <account_name>/`
-`practicacloud_tweetanalysis:latest`
-`$ sudo docker tag <image_id> <account_name>/`
-`practicacloud_web:latest`
+`$ sudo docker tag <image_id> <account_name> practicacloud_tweetanalysis:latest`
+`$ sudo docker tag <image_id> <account_name> practicacloud_web:latest`
 
 #### Para publicar las imágenes:
 
-`$ sudo docker push <account_name>/`
-`practicacloud_tweetanalysis:latest`
-`$ sudo docker push <account_name>/`
-`practicacloud_web:latest`
+`$ sudo docker push <account_name> practicacloud_tweetanalysis:latest`
+`$ sudo docker push <account_name> practicacloud_web:latest`
 
